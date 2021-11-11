@@ -93,6 +93,8 @@ impl Transform {
 
         self.mean_coeffs = means;
 
+        self.idct =  InverseCosineTransform::new(nfilters);
+
         self
     }
 
