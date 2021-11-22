@@ -1,5 +1,4 @@
 use std::collections::VecDeque;
-//use std::intrinsics::breakpoint;
 
 use num_complex::Complex64;
 #[cfg(feature = "fftrust")]
@@ -108,7 +107,7 @@ impl Transform {
         assert_eq!(input.len(), self.buffer_size);
         assert_eq!(output.len(), self.maxfilter * 3);
 
-        self.rb.append_back(&input);
+        self.rb.append_back(input);
         self.rb.apply_hamming(&mut self.windowed_samples);
 
         self.rfft.transform(&mut self.windowed_samples, &mut self.samples_freq_domain);
@@ -179,13 +178,12 @@ impl Transform {
             for i in 0..self.maxfilter*3 {
                 self.mean_coeffs[i] += output[i] / self.normalization_length as f64;
             }
-        } else {
-            if let Some(front) = self.prev_coeffs.pop_front() {
-                for i in 0..self.maxfilter*3 {
-                    self.mean_coeffs[i] += (output[i] - front[i]) / self.normalization_length as f64;
-                }
+        } else if let Some(front) = self.prev_coeffs.pop_front() {
+            for i in 0..self.maxfilter*3 {
+                self.mean_coeffs[i] += (output[i] - front[i]) / self.normalization_length as f64;
             }
         }
+        
 
         self.prev_coeffs.push_back(output.to_vec());
 
@@ -201,7 +199,7 @@ impl Transform {
         }
 
         for (coeff, mean) in output.iter_mut().zip(self.mean_coeffs.iter()) {
-            *coeff = *coeff - mean;
+            *coeff -= mean;
         }
     }
 }
