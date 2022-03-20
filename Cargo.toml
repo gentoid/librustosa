@@ -6,7 +6,7 @@ authors = [
     "Maximilian Krüger <kruemaxi@gmail.com>",
     "Jason Duffy <jasonsduffy@gmail.com",    
 ]
-edition = "2018"
+edition = "2021"
 description = "Calculate Mel Frequency Cepstral Coefficients from audio data"
 keywords = ["dsp", "fft", "stream", "data", "fourier"]
 license = "MIT"
