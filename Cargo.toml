@@ -14,6 +14,9 @@ repository = "https://github.com/bytesnake/mfcc"
 [dependencies]
 num-complex = "0.4"
 ndarray = "^0.15"
+apodize = "1.0"
+num = "0.4"
+strider = "0.1"
 
 [dependencies.fftw]
 version = "0.7"
