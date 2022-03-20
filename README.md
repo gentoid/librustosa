@@ -1,4 +1,6 @@
-# Mel Frequency Cepstral Coefficients
+# lib~~rosa~~Rust'osa!
+
+<!-- # Mel Frequency Cepstral Coefficients
 
 A common pre-processing step in Machine Learning with audio signals is the application of a _Mel Frequency Cepstral Coefficients_ (MFCC) transformation. They compress the signal to a very small number of coefficients (around 16 for every 10ms) and decorrelates the signal to express only the transmission function (e.g. only the formants of an utterance not the pitch). This makes them very popular in Automatic Speech Recognition (ASR), Room Classification, Speaker Recognition etc. 
 
@@ -57,4 +59,4 @@ at your option.
 Unless you explicitly state otherwise, any contribution intentionally
 submitted for inclusion in the work by you, as defined in the Apache-2.0
 license, shall be dual licensed as above, without any additional terms or
-conditions.
+conditions. -->
