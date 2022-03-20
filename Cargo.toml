@@ -11,7 +11,7 @@ description = "Calculate Mel Frequency Cepstral Coefficients from audio data"
 keywords = ["dsp", "fft", "stream", "data", "fourier"]
 license = "MIT"
 categories = ["science"]
-repository = "https://github.com/bytesnake/mfcc"
+repository = "https://github.com/gentoid/librustosa"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
