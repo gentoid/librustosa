@@ -1,7 +1,11 @@
 [package]
 name = "mfcc"
 version = "0.1.0"
-authors = ["Lorenz Schmidt <bytesnake@mailbox.org>", "Maximilian Krüger <kruemaxi@gmail.com>", "Jason Duffy <jasonsduffy@gmail.com"]
+authors = [
+    "Lorenz Schmidt <bytesnake@mailbox.org>",
+    "Maximilian Krüger <kruemaxi@gmail.com>",
+    "Jason Duffy <jasonsduffy@gmail.com",    
+]
 edition = "2018"
 description = "Calculate Mel Frequency Cepstral Coefficients from audio data"
 keywords = ["dsp", "fft", "stream", "data", "fourier"]
